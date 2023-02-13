@@ -13,7 +13,7 @@ namespace Antiban
         public DateTime EstimatedSentTime { get; set; }
         public string Phone { get; set; }
         public int Priority { get; set; }
-        public bool IsSortedByMainRule { get; set; }
+        public bool IsSortedByMainRules { get; set; }
 
         public EventDTO(EventMessage message)
         {
@@ -22,7 +22,7 @@ namespace Antiban
             EstimatedSentTime = message.DateTime;
             Phone = message.Phone;
             Priority = message.Priority;
-            IsSortedByMainRule = false;
+            IsSortedByMainRules = false;
         }
         public AntibanResult ConvertToAntibanResult()
         {
